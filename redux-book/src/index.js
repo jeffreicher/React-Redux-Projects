@@ -5,7 +5,7 @@ import App from './components/App';
 import registerServiceWorker from './helpers/registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import reducers from '../reducers';
+import reducers from './reducers';
 
 const createStoreWithMiddleware = applyMiddleware()(createStore);
 
