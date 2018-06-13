@@ -4,7 +4,9 @@ import SearchBar from '../container/search_bar';
 class App extends Component {
   render() {
     return (
-      <SearchBar />
+      <div className="container">
+        <SearchBar />
+      </div>      
     );
   };
 };
