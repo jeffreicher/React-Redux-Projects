@@ -8,6 +8,7 @@ class SearchBar extends Component {
         super(props);
 
         this.onInputChange = this.onInputChange.bind(this);
+        this.onFormSubmit = this.onFormSubmit.bind(this);
 
         this.state = {
             term: ''
@@ -25,7 +26,7 @@ class SearchBar extends Component {
         event.preventDefault();
 
         this.props.fetchWeather(this.state.term);
-        
+
         this.setState({
             term: ''
         });
