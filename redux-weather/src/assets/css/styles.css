@@ -15,3 +15,12 @@ td:first-of-type, td:first-of-type > div {
     height: 200px;
     width: 250px;
 }
+
+.header {
+    width: 100vw;
+    height: 20vh;
+    background-color: gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
