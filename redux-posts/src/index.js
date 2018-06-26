@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import registerServiceWorker from './helpers/registerServiceWorker';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import reducers from './reducers';
 import PostIndex from './components/posts_index';
 import PostsNew from './components/posts_new';
@@ -16,8 +16,10 @@ ReactDOM.render(
 <Provider store={createStoreWithMiddleware(reducers)}>
     <Router>
         <div>
-            <Route exact path="/" component={PostIndex} />
-            <Route path="/posts/new" component={PostsNew} />
+            <Switch>
+                <Route path="/posts/new" component={PostsNew} />
+                <Route path="/" component={PostIndex} />
+            </Switch>
         </div>
     </Router>
 </Provider>
