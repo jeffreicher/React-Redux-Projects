@@ -18,6 +18,7 @@ class PostsNew extends Component {
                 <Field name="title"  component={this.renderField} label="Title" />
                 <Field name="categories"  component={this.renderField} label="Categories" />
                 <Field name="content"  component={this.renderField} label="Post Content" />
+                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         );
     };
