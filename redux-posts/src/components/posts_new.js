@@ -5,9 +5,9 @@ class PostsNew extends Component {
     renderField(field) {
         return (
             <div className="form-group">
-            <label>{field.label}</label>
+                <label>{field.label}</label>
                 <input className="form-control" type="text" {...field.input} />
-                {field.meta.errors}
+                {field.meta.error}
             </div>
         );
     };
@@ -21,9 +21,9 @@ class PostsNew extends Component {
 
         return (
             <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
-                <Field name="title"  component={this.renderField} label="Title" />
-                <Field name="categories"  component={this.renderField} label="Categories" />
-                <Field name="content"  component={this.renderField} label="Post Content" />
+                <Field name="title" component={this.renderField} label="Title" />
+                <Field name="categories" component={this.renderField} label="Categories" />
+                <Field name="content" component={this.renderField} label="Post Content" />
                 <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         );
