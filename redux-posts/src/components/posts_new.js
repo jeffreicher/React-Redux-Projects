@@ -12,9 +12,15 @@ class PostsNew extends Component {
         );
     };
 
+    onSubmit(values) {
+        console.log(values)
+    };
+
     render() {
+        const { handleSubmit } =this.props;
+
         return (
-            <form>
+            <form onSubmit={handleSubmit(this.onSubmit.bind(this))}>
                 <Field name="title"  component={this.renderField} label="Title" />
                 <Field name="categories"  component={this.renderField} label="Categories" />
                 <Field name="content"  component={this.renderField} label="Post Content" />
