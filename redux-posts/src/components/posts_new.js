@@ -7,14 +7,14 @@ class PostsNew extends Component {
             <div className="form-group">
             <label>{field.label}</label>
                 <input className="form-control" type="text" {...field.input} />
-                {field.meta.error}
+                {field.meta.errors}
             </div>
         );
     };
 
     render() {
         return (
-            <form action="">
+            <form>
                 <Field name="title"  component={this.renderField} label="Title" />
                 <Field name="categories"  component={this.renderField} label="Categories" />
                 <Field name="content"  component={this.renderField} label="Post Content" />
